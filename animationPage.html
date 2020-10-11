@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name = "viewpoint" content="width=device-width,initial-scale=1.0">
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		body{
+			overflow: hidden;
+			margin: 0;
+			padding:0;
+		}
+		.manWalking{
+			position: relative;
+			width: 184px;
+			height: 300px;
+			background-image: url(spritesheet.png);
+			animation: walk 2s steps(8) infinite,forward 10s linear infinite;
+		}
+		@keyframes walk{
+			0%
+			{
+				background-position: 0px;
+			}
+			100%{
+				background-position: -1472px;
+			}
+			0%{
+				background-position: 1472px;
+			}
+		}
+		@keyframes forward{
+			0%{
+				transform: translateX(-100px);
+			}
+			100%{
+				transform: translateX(1200px);
+			}
+		}
+		
+	</style>
+</head>
+<body>
+<div class="manWalking"></div>
+</body>
+</html>
